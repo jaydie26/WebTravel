@@ -193,5 +193,135 @@ body{
     height: 250px;
 }
 
+/* destination */
+.destination
+{
+	text-align: center;
+}
+.destination .destinationList
+{
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3,300px);
+	grid-template-rows: repeat(2,300px);
+	grid-gap: 50px;
+	justify-content: center;
+	align-items: center;
+	/* flex-wrap: wrap; */
+	margin-top: 40px;
+}
+.destination .destinationList .box
+{
+	position: relative;
+	min-width: 300px;
+	height: 300px;
+	background: #191919;
+	transition: 0.5s;
+	/* margin: 10px; */
+}
+.destination .destinationList .box .imgBx
+{
+	width: 300px;
+	height: 300px;
+	/* padding: 5px; */
+	/* margin: auto;
+	box-sizing: border-box; */
+	overflow: hidden;
+	position: relative;
+	/* margin: 10px; */
+}
+.destination .destinationList:hover .box
+{
+	opacity: 0.2;
+}
+.destination .destinationList .box:hover
+{
+	opacity: 1;
+}
 
+.destination .destinationList .box .imgBx img
+{	
+	max-width: 100%;
+	max-height: 100%;
+	transition: 1s;
+}
+
+.destination .destinationList .box:hover .imgBx img
+{	
+	transform: scale(1.5);
+	transition: 1s;
+}
+.destination .destinationList .box .content
+{	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	transition: 1s;
+	z-index: 10;
+	opacity: 0;
+	visibility: hidden;
+	flex-direction: column;
+}
+.destination .destinationList .box:hover .content
+{
+	height: 400px;
+	opacity: 1;
+	visibility:visible;
+}
+.destination .destinationList .box .content h2
+{	
+	color: #fff;
+	font-weight: 500;
+	line-height: 1.2em;
+}
+.destination .destinationList .box .content h2 span
+{
+	font-size: 0.8em;
+	font-weight: 300;
+	opacity: 1;
+}
+.destination .destinationList .box .content a
+{
+	display: inline-block;
+	padding: 10px 20px;
+	background: #fff;
+	border-radius: 4px;
+	margin-top: 10px;
+	text-decoration: none ;
+	font-weight: 600;
+	color: #111;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: 0.5s;
+}
+.destination .destinationList .box:hover .content a
+{
+	opacity: 1;
+	transform: translateY(0px);
+	transition-delay:  0.75s;
+}
+.fitBg
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.8;
+}
+.btn
+{
+	position: relative;
+	display: inline-block;
+	margin-top: 30px;
+	padding: 10px 30px;
+	background: #fff;
+	color: #333;
+	text-decoration: none;
+}
 
