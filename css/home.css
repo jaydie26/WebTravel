@@ -194,45 +194,42 @@ body{
 }
 
 /* destination */
+
 .destination
-{
-	text-align: center;
+{   
+    text-align: center;
 }
 .destination .destinationList
 {
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(3,300px);
-	grid-template-rows: repeat(2,300px);
-	grid-gap: 50px;
+	grid-template-columns: repeat(3,350px);
+	grid-template-rows: repeat(2,350px);
+	grid-gap: 45px;
 	justify-content: center;
 	align-items: center;
 	/* flex-wrap: wrap; */
-	margin-top: 40px;
+    margin-top: 40px;
 }
 .destination .destinationList .box
-{
+{   
+    
 	position: relative;
-	min-width: 300px;
-	height: 300px;
+	width: 350px;
+	height: 350px;
 	background: #191919;
 	transition: 0.5s;
 	/* margin: 10px; */
 }
 .destination .destinationList .box .imgBx
-{
-	width: 300px;
-	height: 300px;
-	/* padding: 5px; */
-	/* margin: auto;
-	box-sizing: border-box; */
+{   width: 350px;
+	height: 350px;
 	overflow: hidden;
 	position: relative;
-	/* margin: 10px; */
 }
 .destination .destinationList:hover .box
 {
-	opacity: 0.2;
+	opacity: 0.7;
 }
 .destination .destinationList .box:hover
 {
@@ -240,7 +237,7 @@ body{
 }
 
 .destination .destinationList .box .imgBx img
-{	
+{	object-fit: cover;
 	max-width: 100%;
 	max-height: 100%;
 	transition: 1s;
@@ -304,7 +301,7 @@ body{
 	transform: translateY(0px);
 	transition-delay:  0.75s;
 }
-.fitBg
+.destination .fitBg
 {
 	position: absolute;
 	top: 0;
@@ -312,16 +309,94 @@ body{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	opacity: 0.8;
+    opacity: 0.8;
 }
-.btn
+.destination .btn
 {
 	position: relative;
 	display: inline-block;
 	margin-top: 30px;
 	padding: 10px 30px;
-	background: #fff;
+	background:#14e0c2;
 	color: #333;
 	text-decoration: none;
+}
+/* Resize */
+@media(max-width: 768px){
+    .destination .destinationList{
+        display: grid;
+	    grid-template-columns: repeat(3,200px);
+	    grid-template-rows: repeat(2,200px);
+
+    }
+    .destination .destinationList .box{
+        width: 200px;
+        height: 200px;
+    }
+    .destination .destinationList .box .imgBx{
+        width: 200px;
+        height: 200px;
+    }
+    .destination .destinationList .box .content h2{	
+	    font-weight: 200;
+        line-height: 0.6em;
+        font-size: 1.5em;
+    }
+    .destination .destinationList .box .content h2 span{
+	font-size: 0.4em;
+	font-weight: 150;
+    }
+    .destination .destinationList .box .content a{
+	padding: 5px 10px;
+	background: #fff;
+	border-radius: 2px;
+	margin-top: 5px;
+	font-weight: 300;
+	transform: translateY(25px);
+    }
+    .destination .destinationList .box:hover .content{
+	height: 150px;
+    }
+}
+@media(max-width: 1164px){
+    .destination .destinationList {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media(max-width: 460px){
+    .destination .destinationList{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .destination .destinationList .box{
+        width: 350px;
+        height: 350px;
+    }
+    .destination .destinationList .box .imgBx{
+        width: 350px;
+        height: 350px;
+    }
+    .destination .destinationList .box .content h2{	
+	    font-weight: 400;
+        line-height: 1.2em;
+        font-size: 2em;
+    }
+    .destination .destinationList .box .content h2 span{
+	    font-size: 0.8em;
+	    font-weight: 300;
+    }
+    .destination .destinationList .box .content a{
+        padding: 10px 20px;
+        border-radius: 4px;
+        margin-top: 10px;
+        font-weight: 600;
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    .destination .destinationList .box:hover .content{
+	height: 400px;
+    }
 }
 
