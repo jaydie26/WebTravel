@@ -10,6 +10,10 @@ body{
     color: #333;
     overflow-x:hidden;
 }
+.container{
+    max-width: 80%;
+    padding: 2rem;
+}
 
 .v-header{
     height: 100vh;
@@ -18,7 +22,7 @@ body{
     color: #fff;
 }
 
-.container{
+.container-header{
     max-width: 960px;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -137,28 +141,33 @@ body{
     opacity: 1;
 }
 @media(max-width: 960px){
-    .container{
+    .container-header{
         padding-left: 3rem;
         padding-right: 3rem;
     }
 }
 
 
-.banner .item-banner1{
+.container{
+    margin-top:10px;
+    text-align:center;
+}
+
+.content-about .item-banner1{
     background-color: #14c1e0;
     padding-right: 30px;
 }
 
-.banner .item-banner3{
+.content-about .item-banner3{
     background-color: #e0dc14;
     padding-right: 30px;
 }
 
-.banner .item-banner5{
+.content-about .item-banner5{
     background-color: #fff;
     padding-right: 30px;
 }
-.banner .item-banner1 img,.banner .item-banner3 img,.banner .item-banner5 img {
+.content-about .item-banner1 img,.content-about .item-banner3 img,.content-about .item-banner5 img {
     margin-top: 20px;
     margin-left: 30px;
     margin-bottom: 20px;
@@ -166,7 +175,7 @@ body{
     height: 70px;
 }
 
-.banner .item-banner1 p,.banner .item-banner3 p,.banner .item-banner5 p{
+.content-about .item-banner1 p,.content-about .item-banner3 p,.content-about .item-banner5 p{
     margin-left: 30px;
     float:left;
     font-size: 14px;
@@ -175,37 +184,51 @@ body{
 .item-banner1,.item-banner2,.item-banner3,.item-banner4,.item-banner5,.item-banner6{
     margin:0;
 }
-.banner{
-    margin-top:10px;
-}
 
-.banner .item-banner{
+.content-about .item-banner{
     margin-top:40px;
     width:300px;
     height:250px;
 }
-.banner .item-banner2,.banner .item-banner4,.banner .item-banner6{
+.content-about .item-banner2,.content-about .item-banner4,.content-about .item-banner6{
    padding-left:0px;
    padding-right:0px;
 }
-.banner .item-banner2 img,.banner .item-banner4 img,.banner .item-banner6 img {
+.content-about .item-banner2 img,.content-about .item-banner4 img,.content-about .item-banner6 img {
     width: 380px;
     height: 250px;
 }
+
+.content-about .item-banner2 img:hover,.content-about .item-banner4 img:hover,.content-about .item-banner6 img:hover {
+    transform: scale(0.9);
+    transition: 1s;
+    overflow: hidden;
+    opacity: 0.9;
+}
+ 
 
 /* destination */
 
 .destination
 {   
     text-align: center;
+    margin-top: 50px;
 }
+
+.destination .title p{
+    padding-left: 250px;
+    padding-right:250px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
 .destination .destinationList
 {
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(3,350px);
-	grid-template-rows: repeat(2,350px);
-	grid-gap: 45px;
+	grid-template-columns: repeat(3,365px);
+	grid-template-rows: repeat(2,365px);
+	grid-gap: 15px;
 	justify-content: center;
 	align-items: center;
 	/* flex-wrap: wrap; */
@@ -215,15 +238,15 @@ body{
 {   
     
 	position: relative;
-	width: 350px;
-	height: 350px;
+	width: 365px;
+	height: 365px;
 	background: #191919;
-	transition: 0.5s;
-	/* margin: 10px; */
+    transition: 0.5s;
+    
 }
 .destination .destinationList .box .imgBx
-{   width: 350px;
-	height: 350px;
+{   width: 365px;
+	height: 365px;
 	overflow: hidden;
 	position: relative;
 }
@@ -286,7 +309,7 @@ body{
 	display: inline-block;
 	padding: 10px 20px;
 	background: #fff;
-	border-radius: 4px;
+	border-radius: 6px;
 	margin-top: 10px;
 	text-decoration: none ;
 	font-weight: 600;
@@ -399,4 +422,13 @@ body{
 	height: 400px;
     }
 }
+
+/* tours */
+
+.tours{
+    text-align:center;
+    margin-top: 50px;
+}
+
+
 
