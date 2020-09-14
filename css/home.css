@@ -8,12 +8,16 @@ body{
     font-size: 1rem;
     line-height: 1.5;
     color: #333;
-    overflow-x:hidden;
+    
 }
 .container{
     max-width: 80%;
     padding: 2rem;
+    margin:0;
+    overflow: hidden;
 }
+
+/* header */
 
 .v-header{
     height: 100vh;
@@ -62,8 +66,6 @@ body{
     min-height: 100px;
     /* border-bottom: #fff 3px solid; */
 }
-
-
 
 .menu-home a{
     color: #ffffff;
@@ -123,7 +125,8 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .header-content p{
-    font-size: 16px;
+    padding-top: 1rem;
+    font-size: 18px;
     display:block;
     padding-bottom: 2rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -146,66 +149,24 @@ body{
         padding-right: 3rem;
     }
 }
-
-
-.container{
-    margin-top:10px;
-    text-align:center;
+/* About us */
+.about-us #content-about{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1.5rem;
+    
 }
 
-.content-about .item-banner1{
-    background-color: #14c1e0;
-    padding-right: 30px;
+#content-about2 .img-about img,#content-about4 .img-about img,#content-about6 .img-about img{
+    max-width: 100%;
+    min-width: 100%;
+    display:block;
 }
 
-.content-about .item-banner3{
-    background-color: #e0dc14;
-    padding-right: 30px;
-}
-
-.content-about .item-banner5{
-    background-color: #fff;
-    padding-right: 30px;
-}
-.content-about .item-banner1 img,.content-about .item-banner3 img,.content-about .item-banner5 img {
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-bottom: 20px;
-    width: 70px;
-    height: 70px;
-}
-
-.content-about .item-banner1 p,.content-about .item-banner3 p,.content-about .item-banner5 p{
-    margin-left: 30px;
-    float:left;
-    font-size: 14px;
-}
-
-.item-banner1,.item-banner2,.item-banner3,.item-banner4,.item-banner5,.item-banner6{
-    margin:0;
-}
-
-.content-about .item-banner{
-    margin-top:40px;
-    width:300px;
-    height:250px;
-}
-.content-about .item-banner2,.content-about .item-banner4,.content-about .item-banner6{
-   padding-left:0px;
-   padding-right:0px;
-}
-.content-about .item-banner2 img,.content-about .item-banner4 img,.content-about .item-banner6 img {
-    width: 380px;
-    height: 250px;
-}
-
-.content-about .item-banner2 img:hover,.content-about .item-banner4 img:hover,.content-about .item-banner6 img:hover {
-    transform: scale(0.9);
-    transition: 1s;
-    overflow: hidden;
-    opacity: 0.9;
-}
- 
 
 /* destination */
 
@@ -344,7 +305,7 @@ body{
 	color: #333;
 	text-decoration: none;
 }
-/* Resize */
+/* Resize destination*/
 @media(max-width: 768px){
     .destination .destinationList{
         display: grid;
@@ -423,12 +384,7 @@ body{
     }
 }
 
-/* tours */
 
-.tours{
-    text-align:center;
-    margin-top: 50px;
-}
 
 
 
