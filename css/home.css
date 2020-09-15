@@ -158,13 +158,34 @@ body{
     align-items: center;
     text-align: center;
     grid-gap: 1.5rem;
-    
+    justify-items: stretch;
+}
+
+#content-about1 .img-about img,#content-about3 .img-about img,#content-about5 .img-about img{
+    margin-top: 1em;
+    width: 4em;
+    height: 4em;
+    margin-bottom: 1em;
 }
 
 #content-about2 .img-about img,#content-about4 .img-about img,#content-about6 .img-about img{
     max-width: 100%;
-    min-width: 100%;
+    min-height: 100%;
     display:block;
+}
+#content-about6 .img-about img{
+    width: 354px;
+    height:189px;
+}
+
+#content-about1, #content-about3{
+    background: #08a7e6;
+    height: 100%;
+}
+
+
+#content-about3{
+    background: #ebec87;
 }
 
 
@@ -383,6 +404,29 @@ body{
 	height: 400px;
     }
 }
+
+/* Top tours */
+
+.TourList{
+    display:flex;
+}
+
+.TourList .card{
+    flex:1;
+    margin: 0 10px;
+}
+
+.TourList .card .img{
+    height:200px;
+    width:100%;
+}
+
+.TourList .card .img img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+}
+
 
 
 
