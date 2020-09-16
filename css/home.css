@@ -206,49 +206,73 @@ body{
 
 .destination .destinationList
 {
-	position: relative;
 	display: grid;
-	grid-template-columns: repeat(3,365px);
-	grid-template-rows: repeat(2,365px);
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
 	grid-gap: 15px;
 	justify-content: center;
 	align-items: center;
-	/* flex-wrap: wrap; */
+    /* flex-wrap: wrap; */
     margin-top: 40px;
+    height: 700px;
+    grid-template-areas: 
+    'box1 box2 box3 box3'
+    'box1 box4 box5 box6';
 }
-.destination .destinationList .box
+.box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display:block;
+}
+.box1
 {   
-    
-	position: relative;
-	width: 365px;
-	height: 365px;
-	background: #191919;
-    transition: 0.5s;
-    
+    grid-area: box1;
 }
-.destination .destinationList .box .imgBx
-{   width: 365px;
-	height: 365px;
+.box2
+{   
+    grid-area: box2;
+}
+.box3
+{   
+    grid-area: box3;
+}
+.box4
+{   
+    grid-area: box4;
+}
+.box5
+{   
+    grid-area: box5;
+}
+.box6
+{   
+    grid-area: box6;
+}
+
+.imgBx
+{   width: 100%;
+	height: 100%;
 	overflow: hidden;
 	position: relative;
 }
-.destination .destinationList:hover .box
+.destinationList:hover .box
 {
 	opacity: 0.7;
 }
-.destination .destinationList .box:hover
+.destinationList .box:hover
 {
 	opacity: 1;
 }
 
-.destination .destinationList .box .imgBx img
+.destinationList .box .imgBx img
 {	
 	max-width: 100%;
 	max-height: 100%;
 	transition: 1s;
 }
 
-.destination .destinationList .box:hover .imgBx img
+.destinationList .box:hover .imgBx img
 {	
 	transform: scale(1.5);
 	transition: 1s;
@@ -257,7 +281,7 @@ body{
 {	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 80px;
+	height: 30%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -268,21 +292,24 @@ body{
 	visibility: hidden;
 	flex-direction: column;
 }
+
 .destination .destinationList .box:hover .content
-{
-	height: 400px;
+{   
+    font-size: 2.5  vw;
+	height: 100%;
 	opacity: 1;
 	visibility:visible;
 }
 .destination .destinationList .box .content h2
 {	
+    font-size: 100%;
 	color: #fff;
 	font-weight: 500;
-	line-height: 1.2em;
+	line-height: 2rem;
 }
 .destination .destinationList .box .content h2 span
 {
-	font-size: 0.8em;
+	font-size: 60%;
 	font-weight: 300;
 	opacity: 1;
 }
@@ -290,7 +317,7 @@ body{
 {
 	display: inline-block;
 	padding: 10px 20px;
-	background: #fff;
+	background: #14e0c2;
 	border-radius: 6px;
 	margin-top: 10px;
 	text-decoration: none ;
@@ -318,6 +345,7 @@ body{
 }
 .destination .btn
 {
+    font-size: small;
 	position: relative;
 	display: inline-block;
 	margin-top: 30px;
@@ -328,82 +356,22 @@ body{
 }
 /* Resize destination*/
 @media(max-width: 768px){
-    .destination .destinationList{
-        display: grid;
-	    grid-template-columns: repeat(3,200px);
-	    grid-template-rows: repeat(2,200px);
 
+    .destination .container{
+        width: 70%;
+        height: 70%;
     }
-    .destination .destinationList .box{
-        width: 200px;
-        height: 200px;
-    }
-    .destination .destinationList .box .imgBx{
-        width: 200px;
-        height: 200px;
-    }
-    .destination .destinationList .box .content h2{	
-	    font-weight: 200;
-        line-height: 0.6em;
-        font-size: 1.5em;
-    }
-    .destination .destinationList .box .content h2 span{
-	font-size: 0.4em;
-	font-weight: 150;
-    }
-    .destination .destinationList .box .content a{
-	padding: 5px 10px;
-	background: #fff;
-	border-radius: 2px;
-	margin-top: 5px;
-	font-weight: 300;
-	transform: translateY(25px);
-    }
-    .destination .destinationList .box:hover .content{
-	height: 150px;
+    .destination .destinationList
+    {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'box1 box2'
+    'box1 box3'
+    'box4 box6'
+    'box5 box6';
     }
 }
-@media(max-width: 1164px){
-    .destination .destinationList {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-@media(max-width: 460px){
-    .destination .destinationList{
-        display: flex;
-        flex-wrap: wrap;
 
-    }
-    .destination .destinationList .box{
-        width: 350px;
-        height: 350px;
-    }
-    .destination .destinationList .box .imgBx{
-        width: 350px;
-        height: 350px;
-    }
-    .destination .destinationList .box .content h2{	
-	    font-weight: 400;
-        line-height: 1.2em;
-        font-size: 2em;
-    }
-    .destination .destinationList .box .content h2 span{
-	    font-size: 0.8em;
-	    font-weight: 300;
-    }
-    .destination .destinationList .box .content a{
-        padding: 10px 20px;
-        border-radius: 4px;
-        margin-top: 10px;
-        font-weight: 600;
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    .destination .destinationList .box:hover .content{
-	height: 400px;
-    }
-}
 
 /* Top tours */
 
