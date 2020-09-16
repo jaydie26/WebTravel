@@ -410,22 +410,83 @@ body{
 .TourList{
     display:flex;
 }
-
-.TourList .card{
-    flex:1;
-    margin: 0 10px;
+.tours .container .title{
+    text-align: center;
+    margin-bottom: 2em;
+}
+.container .TourList{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width:100%;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container .TourList .tour-item .img-list{
+    overflow:hidden;
 }
 
-.TourList .card .img{
-    height:200px;
+.container .TourList .tour-item .img-list img{
     width:100%;
-}
-
-.TourList .card .img img{
-    height:100%;
-    width:100%;
+    height: 350px;
     object-fit:cover;
 }
+
+.container .TourList .tour-item .img-list img:hover{
+    opacity: 0.5;
+    transform: scale(1.5);
+    transition: 1s;
+}
+.container .TourList .tour-item .wrap-list-gui{
+    padding:1em;
+    text-align: left;
+    border: 2px solid #f3f1f1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.container .TourList .tour-item .wrap-list-gui .price{
+    float: right;
+}
+
+.container .TourList .tour-item .wrap-list-gui h3{
+    font-size: 1rem;
+}
+
+.container .TourList .tour-item .wrap-list-gui .add-view {
+    position: relative;
+	display: inline-block;
+	margin-top: 30px;
+	padding: 10px 30px;
+	background:#14e0c2;
+	color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 6em;
+    
+}
+
+.container .TourList .tour-item .wrap-list-gui .add-view:hover {
+   opacity: 0.6;
+}
+.tours .container .btn{
+    color: #fff;
+    background: #3163eb;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    opacity: 0.6;
+    margin-left: 23.5em;
+    margin-top:2em;
+}
+.tours .container .btn:hover{
+    opacity: 1;
+}
+
+
+
+
 
 
 
