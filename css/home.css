@@ -295,7 +295,7 @@ body{
 
 .destination .destinationList .box:hover .content
 {   
-    font-size: 2.5  vw;
+    font-size: 2.5vw;
 	height: 100%;
 	opacity: 1;
 	visibility:visible;
@@ -393,6 +393,109 @@ body{
     height:100%;
     width:100%;
     object-fit:cover;
+}
+
+/* Blog */
+.container2{
+    display: flex;
+    flex-direction: column;
+}
+.blog .container2 .title p{
+    padding-left: 250px;
+    padding-right:250px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.blog .container ul{
+	list-style:none;
+}
+.blog .container a{
+	text-decoration:none;
+}
+.blog .container{
+	width:100%;
+	height: 100vh;
+	background-color:#fff;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.blog .container .item-a .box{
+	width:350px;
+	height:400px;
+	background-color:#fff;
+	border-radius: 10px;
+	box-shadow: 2px 10px 12px rgba(0,0,0,0.5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+	font-size:20px;
+	margin: 20px 10px;
+}
+.blog .container .item-a .box .model{
+	height: 250px;
+	max-height: 100%;
+	max-width: 100%;
+}
+.blog .container .item-a .box .content{
+    font-size: 100%;
+    height: 100%;
+	position: relative;
+    overflow: hidden;
+	text-align: left;
+    margin-top: 7px;
+}
+
+.blog .container .item-a .box .content .blog-infor{
+	font-size: 100%;
+    padding-left: 20px;
+}
+.blog-infor .post-categories:hover{
+	color:#d68a46;
+}
+.post-categories{
+	font-size: 100%;
+	font-weight: 700;
+	text-shadow: 0 2px 2px rgba(0,0,0,.5);;
+}
+.blog .container .item-a .box .content .blog-infor h3{
+	line-height: 1.6rem;
+	margin-bottom: 5px;
+	font-size: 100%;
+	font-weight: 500;
+}
+.blog .container .item-a .box .content .blog-infor h3 a{
+	color: #333;
+    font-size: 120%;
+    font-weight: 600;
+}
+.blog .container .item-a .box .content .author-date{
+    position: absolute;
+    bottom: 5px;
+	font-size: 70%;
+	margin-bottom: 15px;
+    color:#d68a46;
+}
+
+.blog .container .item-a .box:hover{
+	background-color: #fff;
+	transform-style: preserve-3d;
+	transform: scale(1.02);
+	transition: all ease 0.3s;
+}
+
+/*--responsive for mobile phone--*/
+@media(max-width:720px){
+	.blog .container .item-a .box{
+		width: 94%;
+		height: 500px;
+	}
+	.blog .container .item-a .box .model{
+		height:250px;
+	}
+	
 }
 
 
