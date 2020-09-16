@@ -465,15 +465,14 @@ body{
 }
 .blog .container{
 	width:100%;
-	height: 100vh;
 	background-color:#fff;
 	display:flex;
 	justify-content: center;
-	align-items: center;
+
 	
 }
 .blog .container .item-a .box{
-	width:350px;
+	width:344px;
 	height:400px;
 	background-color:#fff;
 	border-radius: 10px;
@@ -486,7 +485,7 @@ body{
 	margin: 20px 10px;
 }
 .blog .container .item-a .box .model{
-	height: 250px;
+	height: 63%;
 	max-height: 100%;
 	max-width: 100%;
 }
@@ -542,9 +541,6 @@ body{
 	.blog .container .item-a .box{
 		width: 94%;
 		height: 500px;
-	}
-	.blog .container .item-a .box .model{
-		height:250px;
 	}
 	
 }
