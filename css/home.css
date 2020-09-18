@@ -102,16 +102,19 @@ body{
     float: right;
     margin-top: 10px;
     margin-right: 30px;
+    
 }
 
-.menu-home .current a{
-    color:#e8491d;
-    font-weight: bold;
+
+.menu-home a{
+    font-size: 1.2rem;
+    color: #f12408;
+    font-weight: 5px;
 }
 
 .menu-home a:hover{
-    color: #cccccc;
-    font-weight: bold;
+    color: #e0850f;
+    text-decoration: none;
 }
 
 
@@ -122,7 +125,9 @@ body{
     font-size: 60px;
     margin-bottom: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
 }
+
 .header-content p{
     padding-top: 1rem;
     font-size: 18px;
@@ -149,6 +154,11 @@ body{
     }
 }
 /* About us */
+.about-us .container .title h1{
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 1.7em;
+}
 .about-us #content-about{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -197,8 +207,8 @@ body{
 }
 
 .destination .title p{
-    padding-left: 250px;
-    padding-right:250px;
+    padding-left: 50px;
+    padding-right:50px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
@@ -344,14 +354,17 @@ body{
 }
 .destination .btn
 {
-    font-size: small;
-	position: relative;
-	display: inline-block;
-	margin-top: 30px;
-	padding: 10px 30px;
-	background:#14e0c2;
-	color: #333;
-	text-decoration: none;
+    color: #fff;
+    background: #3163eb;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    opacity: 0.6;
+    margin-top: 1.5em;
+}
+
+.destination .btn:hover{
+    opacity: 1;
 }
 /* Resize destination*/
 @media(max-width: 768px){
@@ -450,29 +463,30 @@ body{
 }
 
 /* Blog */
-.container2{
-    display: flex;
-    flex-direction: column;
+
+.blog .container h1{
+    margin-bottom: 1em;
+    text-align: center;
+    margin-top: 2em;
 }
-.blog .container2 .title h1{
+.blog .title h1{
    text-align: center;
 }
-.blog .container ul{
+.blog .list_blog ul{
 	list-style:none;
 }
-.blog .container a{
+.blog .list_blog a{
 	text-decoration:none;
 }
-.blog .container{
+.blog .list_blog{
 	width:100%;
 	height: 100vh;
 	background-color:#fff;
 	display:flex;
 	justify-content: center;
 	align-items: center;
-	
 }
-.blog .container .item-a .box{
+.blog .list_blog .item-a .box{
 	width:350px;
 	height:400px;
 	background-color:#fff;
@@ -485,12 +499,12 @@ body{
 	font-size:20px;
 	margin: 20px 10px;
 }
-.blog .container .item-a .box .model{
+.blog .list_blog .item-a .box .model{
 	height: 250px;
 	max-height: 100%;
 	max-width: 100%;
 }
-.blog .container .item-a .box .content{
+.blog .list_blog .item-a .box .content{
     font-size: 100%;
     height: 100%;
 	position: relative;
@@ -499,7 +513,7 @@ body{
     margin-top: 7px;
 }
 
-.blog .container .item-a .box .content .blog-infor{
+.blog .list_blog .item-a .box .content .blog-infor{
 	font-size: 100%;
     padding-left: 20px;
 }
@@ -511,18 +525,18 @@ body{
 	font-weight: 700;
 	text-shadow: 0 2px 2px rgba(0,0,0,.5);;
 }
-.blog .container .item-a .box .content .blog-infor h3{
+.blog .list_blog .item-a .box .content .blog-infor h3{
 	line-height: 1.6rem;
 	margin-bottom: 5px;
 	font-size: 100%;
 	font-weight: 500;
 }
-.blog .container .item-a .box .content .blog-infor h3 a{
+.blog .list_blog .item-a .box .content .blog-infor h3 a{
 	color: #333;
     font-size: 120%;
     font-weight: 600;
 }
-.blog .container .item-a .box .content .author-date{
+.blog .list_blog .item-a .box .content .author-date{
     position: absolute;
     bottom: 5px;
 	font-size: 70%;
@@ -530,7 +544,7 @@ body{
     color:#d68a46;
 }
 
-.blog .container .item-a .box:hover{
+.blog .list_blog .item-a .box:hover{
 	background-color: #fff;
 	transform-style: preserve-3d;
 	transform: scale(1.02);
@@ -539,17 +553,53 @@ body{
 
 /*--responsive for mobile phone--*/
 @media(max-width:720px){
-	.blog .container .item-a .box{
+	.blog .list_blog .item-a .box{
 		width: 94%;
 		height: 500px;
 	}
-	.blog .container .item-a .box .model{
+	.blog .list_blog .item-a .box .model{
 		height:250px;
 	}
 	
 }
 
+/* back to top */
 
+a.cd-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+   
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: #3097D1 url("https://thinhweb.com/wp-content/themes/thinhweb/images/cd-top-arrow.svg") no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+}
+a.cd-top.cd-is-visible, a.cd-top.cd-fade-out, .no-touch a.cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+a.cd-top, a.cd-top:visited, a.cd-top:hover {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+a.cd-top.cd-is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+a.cd-top.cd-fade-out {
+    opacity: 1;
+}
 
 
 
