@@ -225,3 +225,9 @@ input {
 	height: 40px;
 	width: 40px;
 }
+
+.social-container a:hover{
+    color:blue;
+    transition: all .3s;
+    transform: scale(1.3);
+}
