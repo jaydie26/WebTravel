@@ -252,3 +252,60 @@ body{
 .content .container .btn:hover{
     opacity: 1;
 }
+
+.content .container .recommend #recommend-tours{
+    font-style: italic;
+}
+
+.content .container .recommend #title{
+    text-align: center;
+    font-size: 24px;
+}
+
+.content .container .feature-tours h2{
+    font-size: 40px;
+}
+
+.content .container .recommend p,.content .container .feature-tours p{
+    text-align: left;
+    font-size: 19px;
+    margin-bottom: 2em;;
+}
+.package-tours .container .tab-list .tab-show{
+    font-size:20px;
+    margin-top: 1em;
+}
+.package-tours .container .tab-list .tab-control{
+    color:rgb(93, 99, 184);
+    font-size: 26px;
+    font-weight: 20px;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.package-tours .container .tab-list .tab-control li{
+    margin-bottom: 1em;
+}
+
+.package-tours .container .tab-list {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+}
+.package-tours .container h1{
+    font-size: 40px;
+}
+.package-tours .container .tab-list .tab-control .nav-tabs .tab-item:hover{
+    
+    cursor: pointer;
+}
+
+.show{
+    display:block !important;
+}
+
+#tab-1-content, #tab-2-content,#tab-3-content,#tab-4-content,#tab-5-content,#tab-6-content{
+    display:none;
+}
+.tab-border{
+    font-weight:bold;
+}
