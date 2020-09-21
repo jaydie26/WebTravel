@@ -11,24 +11,23 @@ document.getElementById("defautOpen").click();
 
 window.addEventListener('scroll', function() {
     var x = pageYOffset;
-    if (x < 600) {
+    if (x < 650) {
 
         let a = document.getElementById("advert");
         a.style.position = "static";
         a.style.top = "auto";
-        a.style.marginLeft=20;
-    } else if (x >= 600&&x<1300) {
-
-
+        a.style.marginLeft="10px";
+        a.style.marginTop="40px";
+    } else if (x >= 650&&x<1200) {
         let a = document.getElementById("advert");
         a.style.position = "fixed";
-        a.style.top = "120px";
-        a.style.right = "60px";
-    } else if(x>=1300){
-
-
+        a.style.marginTop="40px"
+        a.style.top = "90px";
+        a.style.right = "123px";
+    } else{
         let a = document.getElementById("advert");
         a.style.position = "static";
-        a.style.top = "auto";
+        a.style.top="auto";
+        a.style.marginTop="600px";
     }
 })

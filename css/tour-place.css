@@ -97,7 +97,7 @@ body{
 .DescribeTour .AboutTourContainer .AboutTour{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 75%;
 }
 .DescribeTour .AboutTourContainer{
     width: 100%;
@@ -220,24 +220,6 @@ body{
     margin-bottom: 5px;
 }
 
-
-/* Resize destination*/
-@media(max-width: 768px){
-
-    .AboutTour .DescribeTour .container{
-        width: 70%;
-        height: 70%;
-    }
-    .AboutTour .DescribeTour .PictureOfTour
-    {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    'box1 box2'
-    'box1 box3'
-    'box4 box6'
-    'box5 box6';
-    }
-}
 /* DescribeDetailTour */
 .AboutTour .DescribeDetailTour{
     margin-top: 50px;
@@ -257,6 +239,9 @@ body{
 }
 .tab-content{
     display: none;
+}
+.tab-content .post-blog img{
+    width: 100%;
 }
 
 
@@ -425,7 +410,7 @@ body{
 
 }
 .booknow a{
-	margin-top: 30px;
+	margin-top: 50px;
 	padding: 10px 30px;
 	background:#14e0c2;
 	color: #333;
@@ -448,5 +433,42 @@ body{
     margin-top:2em;
 }
 .tours .container .btn:hover{
+    opacity: 1;
+}
+/* back to top */
+
+a.cd-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+   
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: #3097D1 url("https://thinhweb.com/wp-content/themes/thinhweb/images/cd-top-arrow.svg") no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+}
+a.cd-top.cd-is-visible, a.cd-top.cd-fade-out, .no-touch a.cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+a.cd-top, a.cd-top:visited, a.cd-top:hover {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+a.cd-top.cd-is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+a.cd-top.cd-fade-out {
     opacity: 1;
 }
