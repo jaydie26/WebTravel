@@ -87,96 +87,251 @@ body{
     text-align: center;
     margin-bottom: 2em;
 }
-.container .TourList2{
+.container .Book-tour{
     width: 70%;
     display: flex;
     flex-direction: column;
+}
+.Book-tour .btnbook{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.Book-tour .btn-big{
+    width: 30%;
+    margin-top: 50px;
+    font-size: 20px;
 }
 .container .TourListContainer{
     display: flex;
     position: relative;
 }
-.container .TourList2 .TourList{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    width:100%;
-    grid-gap: 2.5rem;
+.Book-tour .SelectDetail{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 2px solid thistle;
+}
+.Book-tour .SelectDetail .btnSelect1,.Book-tour .SelectDetail .btnSelect2,.Book-tour .SelectDetail .btnSelect3{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 70px;
+    margin: 2px;
     justify-content: center;
     align-items: center;
-    text-align: center;
-}
-.TourList .img-list{
-    width: 100%;
-}
-.tour{
-    width: 100%;
-    display: block;
-    margin-bottom: 4rem; 
-}
-.tour .tour-img {
-    height: 300px;
-    margin-bottom: 20px;
-    display: block;
-    position: relative; 
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    position: relative; 
-}
-.tour .tour-img .price {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: #00BBF0;
-    color: #fff;
-    padding: 8px 12px;
-    margin: 0; 
-}
-.tour .tour-img .price span {
-    font-size: 16px;
-    font-weight: 500;
-}
-.tour .tour-img .price span small {
-    font-size: 16px; 
-}
-.tour .desc {
-    display: block; 
-}
-.tour .desc h2 {
     font-size: 20px;
-    text-transform: uppercase;
-    margin-bottom: 10px; 
+    font-weight: 500;
+    border-radius: 5px;
 }
-.tour .desc h2 a {
-    color: #000; 
+.Book-tour .SelectDetail span, .Book-tour .SelectDetail p{
+    color: gray;
+    margin:0px;
 }
-.tour .desc .city {
-    display: block;
-    color: #b3b3b3;
-    margin-bottom: 5px; 
+.active{
+    background-color: cornflowerblue;
 }
-.tour .desc .star {
-    margin-bottom: 15px;
-    font-size: 12px;
-    color: #b3b3b3; 
+.Book-tour .SelectDetail .btnSelect1:hover,.Book-tour .SelectDetail .btnSelect2:hover,.Book-tour .SelectDetail .btnSelect3:hover{
+    background-color: cornflowerblue;
 }
-.tour .desc .star span i {
-    color: #FFDD00; 
+.btnSelect1:hover span,.btnSelect2:hover span,.btnSelect3:hover span,.btnSelect1:hover p,.btnSelect2:hover p,.btnSelect3:hover p{
+    color: white;
 }
-.pagination{
+.step1{
+    display:flex;
+    flex-direction: column;
+}
+.Tour-inf{
+    margin-top:50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.Tour-inf .Tour-inf-detail{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid thistle;
+}
+.content-tour{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 5px;
+    margin:1px;
+    background-color: rgb(16, 16, 114);
+}
+.content-tour span{
+    margin-left: 15px;
+    color:white;
+}
+.Tour-inf-detail .tour-inf-dt .Tour-name span{
+    margin-left: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color:red
+}
+.Tour-inf .Tour-price{
+    margin-left: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid thistle;
+}
+.Tour-inf .Tour-price .Tour-price-table{
+    margin-top: 5px;
     display: flex;
     justify-content: center;
 }
-.pagination > li > a{
+.Tour-inf .Tour-price table{
+    width: 100%;
+    text-align: center;
+}
+.Tour-inf .Tour-price tr{
+    border: 1px solid thistle;
+}
+.Tour-inf .Tour-price .note{
+    margin-top: 5px;
+    font-style: italic;
+    color: red;
+    text-align: center;
+}
+.Tour-inf .Tour-price .note .Currency_unit{
+    margin-top: 5px;
+    font-style: italic;
+    color: black;
+    text-align: center;
+}
+.Contact-Person{
+    margin-top:50px;
+    border: 1px solid thistle;
+}
+.Contact-Person .Contact-Person-Inf{
+    height: 150px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.Contact-Person .Contact-Person-Inf .boxrow1, .boxrow2, .boxrow3{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+}
+.Contact-Person .Contact-Person-Inf .cnt{
+    width: 25%;
+}
+.Contact-Person .Contact-Person-Inf .box-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: 5px;
+}
+.Contact-Person .Contact-Person-Inf .box-container .box{
+    margin-left: 5px;
+    width: 75%;
+    border: 1px solid thistle;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    height: 30px;
+}
+.Contact-Person .Contact-Person-Inf .boxrow3 .box-container .cnt{
+    width: 12.25%;
+}
+.Contact-Person .Contact-Person-Inf .boxrow3 .box-container .box{
+    margin-left: 5px;
+    width: 87.75%;
+    border: 1px solid thistle;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.List-customer{
+    margin-top: 50px;
+    width: 100%;
+    border: 1px solid thistle;
+}
+.List-customer .List-customer-detail .tablebar{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid thistle;
+}
+.List-customer .List-customer-detail table{
+    width: 100%;
+    text-align: center;
+}
+.insert-customer{
     position: relative;
-    padding: 10px 20px;
-    line-height: 1.42857;
-    text-decoration: none;
-    color: #337ab7;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin-left: -1px;
- 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:50px;
+}
+.insert-customer .insertBtn{
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    height: 80%;
+}
+.insert-customer .SaleId{
+    position: absolute;
+    margin-top: 5px;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    right: 5px;
+}
+.insert-customer .SaleId .cnt{
+    width: 150px;
+    display: flex;
+    background-color: gray;
+    border: 1px solid;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.insert-customer .SaleId .box{
+    width: 200px;
+    border: 1px solid thistle;
+    border-radius: 5px;
+}
+.Money{
+    position: relative;
+    margin-top:10px;
+    border: 1px solid thistle;
+    display:flex;
+    flex-direction: row;
+}
+.Money .note{
+    font-style: italic;
+    color: red;
+}
+.Money .price{
+    position: absolute;
+    display:flex;
+    flex-direction: row;
+    right: 5px;
+}
+.Money .price span{
+    margin-left: 5px;
+    color: red;
+    font-weight: 1000;
+}
+.payments{
+    margin-top: 50px;
+    border: 1px solid thistle;
+}
+.payments .payments-detail{
+    margin-left:50px;
+    margin-bottom: 30px;
+}
+.payments .payments-detail p{
+    font-size: 20px;
+    font-style: italic;
 }
 .find-tour{
     padding-left: 50px;
