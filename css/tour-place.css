@@ -435,6 +435,40 @@ body{
 .tours .container .btn:hover{
     opacity: 1;
 }
+/*User-Review*/
+.users-feedback {
+    padding: 100px 0;
+}
+.users-feedback .container .title{
+    text-align: center;
+}
+.users-feedback .container .title{
+    margin-bottom: 50px;
+}
+.user-review{
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 100, 0.2);
+}
+.user-review p{
+    padding: 50px 10px 10px 10px;
+}
+.users-feedback img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    margin: -40px 0 20px 40%;
+}
+.user-review p::before{
+    content:'\201d';
+    display: block;
+    position: absolute;
+    font-size: 100px;
+    color: #6495ed;
+    font-family: sans-serif;
+    left: 44%;
+    top: -20px;
+}
 /* back to top */
 
 a.cd-top {
