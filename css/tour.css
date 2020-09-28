@@ -123,6 +123,10 @@ body{
     background-repeat: no-repeat;
     position: relative; 
 }
+.tour .tour-img img{
+    width: 100%;
+    height: 100%;
+}
 .tour .tour-img .price {
     position: absolute;
     bottom: 0;
